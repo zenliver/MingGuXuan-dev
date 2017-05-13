@@ -1,0 +1,64 @@
+    <div id="footer" class="mt50-xs">
+        <div class="footer_logo">
+            <img src="images/ui/footer_logo.png" alt="" class="img-responsive">
+        </div>
+        <div class="footer_nav text-center">
+            <i class="fa fa-weixin" data-toggle="modal" data-target="#footer_weixin_modal"></i>
+            <a href="#">联系我们</a>
+            <a href="#">产品展示</a>
+            <a href="#">地图导航</a>
+        </div>
+        <div class="footer_line"></div>
+        <div class="footer_backtotop">
+            <img src="images/ui/footer_backtotop.jpg" alt="" class="img-responsive">
+        </div>
+    </div>
+    <!-- footer end -->
+
+    <!-- 微信二维码modal -->
+    <div class="modal fade" id="footer_weixin_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">微信公众号</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="images/ui/weixin_qrcode.jpg" alt="" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- js -->
+    <script src="js/libs/jquery-1.12.4.min.js" charset="utf-8"></script>
+    <script src="js/libs/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/libs/scrollreveal/3.3.5/scrollreveal.min.js" charset="utf-8"></script>
+    <script src="js/libs/fancybox/3.0/jquery.fancybox.min.js"></script>
+    <script src="js/libs/jquery.zhjsplugin.js" charset="utf-8"></script>
+    <script src="js/libs/elevator.min.js" charset="utf-8"></script>
+    <script src="js/common.js" charset="utf-8"></script>
+
+    <!-- <script type="text/javascript">
+        var srConfig = {
+            reset:true,
+            mobile:true
+        }
+        window.sr = new scrollReveal(srConfig);
+    </script> -->
+
+    <script type="text/javascript">
+        window.onload = function() {
+            var elevator = new Elevator({
+                element: document.querySelector(".footer_backtotop img"),
+                duration: 1500, // milliseconds
+                endCallback: function () {
+                    // $("body").animateCss("bounce");
+                }
+            });
+        }
+    </script>

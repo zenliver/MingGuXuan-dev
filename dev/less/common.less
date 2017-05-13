@@ -1,0 +1,367 @@
+/*Code by ZHJ/ZenLiver*/
+/*项目名称*/
+
+/*=== 隐藏bs提示 ===*/
+#__bs_notify__ {
+    display: none !important;
+}
+
+/*=== 全局通用样式 ===*/
+body {
+    font-family: Arial, "Microsoft YaHei";
+    background-color: #000000;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*调整PC下container宽度*/
+@contentWidth:1200px;
+@media (min-width: 1260px) { // 内容区域宽度+60px
+    .container {
+        width: @contentWidth+30; // 内容区域宽度+30px
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;
+    }
+}
+.img-responsive {
+    margin-left: auto;
+    margin-right: auto;
+}
+.thumbnail {
+    border-radius: 0;
+    padding: 0;
+    border: none;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: none;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    border-radius: 0;
+}
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+    border-radius: 0;
+}
+// 表格
+.table>thead>tr>th {
+    vertical-align: middle;
+}
+.table-responsive {
+    @media (max-width: 767px) {
+        overflow-x: scroll;
+    }
+}
+/*通用padding、margin*/
+@media (max-width: 767px) {
+    .pt30-xs {
+        padding-top: 30px !important;
+    }
+    .pt50-xs {
+        padding-top: 50px !important;
+    }
+    .pb30-xs {
+        padding-bottom: 30px !important;
+    }
+    .pb50-xs {
+        padding-bottom: 50px !important;
+    }
+    .mt30-xs {
+        margin-top: 30px !important;
+    }
+    .mt50-xs {
+        margin-top: 50px !important;
+    }
+    .mb30-xs {
+        margin-bottom: 30px !important;
+    }
+    .mb50-xs {
+        margin-bottom: 50px !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .pt50-sm {
+        padding-top: 50px !important;
+    }
+    .pb50-sm {
+        padding-bottom: 50px !important;
+    }
+    .mt50-sm {
+        margin-top: 50px !important;
+    }
+    .mb50-sm {
+        margin-bottom: 50px !important;
+    }
+    .mb80-sm {
+        margin-bottom: 80px !important;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .pt50-md {
+        padding-top: 50px !important;
+    }
+    .pt80-md {
+        padding-top: 80px !important;
+    }
+    .pb50-md {
+        padding-bottom: 50px !important;
+    }
+    .pb80-md {
+        padding-bottom: 80px !important;
+    }
+    .mt50-md {
+        margin-top: 50px !important;
+    }
+    .mt80-md {
+        margin-top: 80px !important;
+    }
+    .mb50-md {
+        margin-bottom: 50px !important;
+    }
+    .mb80-md {
+        margin-bottom: 80px !important;
+    }
+}
+
+/*=== 公共模块样式 ===*/
+
+// header
+#header {
+    .navbar-nav>li>a {
+        color: #f59e00;
+        font-size: 18px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 22px;
+        padding-right: 22px;
+        border-right: 1px solid #7b4f00;
+        @media (min-width: 768px) and (max-width: 991px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        @media (max-width: 767px) {
+            border-right: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    .navbar-nav>li.active>a, .nav>li>a:focus, .nav>li>a:hover {
+        color: #ffffff;
+        background-color: #ad0003;
+        border-right: none;
+        border-left: none !important;
+    }
+    .navbar-nav>li:last-child>a {
+        border-right: none;
+    }
+    .navbar-nav>li:nth-child(4) {
+        @media (min-width: 992px) {
+            margin-right: 220px;
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            margin-right: 160px;
+        }
+    }
+    .navbar-nav>li:nth-child(5) a {
+        border-left: 1px solid #7b4f00;
+        @media (max-width: 767px) {
+            border-left: none;
+        }
+
+    }
+    .navbar-brand {
+        height: auto;
+        @media (min-width: 768px) {
+            float: none;
+            display: inline-block;
+            padding: 25px 0 0 0;
+            margin-left: 4px;
+        }
+    }
+    .navbar-brand>img {
+        @media (min-width: 768px) {
+            display: initial;
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            width: 130px;
+        }
+        @media (max-width: 767px) {
+            width: 130px;
+        }
+    }
+    .navbar-header {
+        @media (min-width: 768px) {
+            float: none;
+            text-align: center;
+        }
+    }
+    .navbar-nav {
+        @media (min-width: 768px) {
+            float: none;
+            display: inline-block;
+        }
+    }
+    .navbar-collapse {
+        @media (min-width: 768px) {
+            text-align: center;
+            margin-top: -25px;
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .navbar-toggle {
+        margin-top: 29px;
+        background-color: #333;
+    }
+    .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+    .navbar {
+        margin-bottom: 2px;
+    }
+}
+
+// footer
+
+#footer {
+    background-color: #ad0003;
+    margin-top: 90px;
+    padding-top: 25px;
+}
+.footer_nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    i.fa-weixin {
+        color: #fff;
+        font-size: 30px;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    a {
+        color: #ffffff;
+        font-size: 18px;
+        padding-left: 18px;
+        padding-right: 18px;
+        @media (max-width: 767px) {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+}
+.footer_line {
+    height: 3px;
+    background-color: #ecc3c4;
+    border-top: 1px solid #fff;
+    margin-bottom: 20px;
+}
+.footer_backtotop img {
+    cursor: pointer;
+}
+
+// weixin_qrcode_modal
+
+#footer_weixin_modal {
+    .modal-body {
+        padding: 0;
+    }
+}
+
+// 企业荣誉公用模块
+
+.index_rongyu_body {
+    background-image: url(../images/ui/index_rongyu_body_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 70px;
+    padding-bottom: 95px;
+    @media (max-width: 991px) {
+        padding-bottom: 50px;
+    }
+    @media (max-width: 767px) {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+}
+.index_rongyu_body_row1 {
+    margin-bottom: 50px;
+    padding-left: 240px;
+    padding-right: 240px;
+    @media (max-width: 767px) {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 30px;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .col-md-4 {
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
+        }
+        img {
+            @media (min-width: 1200px) {
+                height: 173px;
+            }
+            @media (min-width: 992px) and (max-width: 1199px) {
+                height: 173px;
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+                height: 173px;
+            }
+            @media (max-width: 767px) {
+                height: 106px;
+            }
+        }
+
+    }
+}
+.index_rongyu_body_row2 {
+    padding-left: 30px;
+    padding-right: 30px;
+    @media (max-width: 767px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media (min-width: 1200px) {
+        margin-left: -7px;
+        margin-right: -7px;
+    }
+    .col-md-2 {
+        @media (min-width: 1200px) {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+        @media (min-width: 992px) {
+            width: 20%;
+        }
+        @media (max-width: 991px) {
+            margin-bottom: 20px;
+        }
+        img {
+            @media (min-width: 1200px) {
+                height: 160px;
+            }
+            @media (min-width: 992px) and (max-width: 1199px) {
+                height: 112px;
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+                height: 147px;
+            }
+            @media (max-width: 767px) {
+                height: 85px;
+            }
+        }
+    }
+
+}
