@@ -425,9 +425,10 @@
         </div>
     </div>
 
-
-
-
+    <!-- 背景音乐 -->
+    <div id="bgmusic" style="display:none">
+        <audio id="bgmusic_audio" src="media/moonlight_bgmusic.mp3" autoplay="autoplay" loop="loop"></audio>
+    </div>
 
     <!-- js -->
     <script src="js/libs/jquery-1.12.4.min.js" charset="utf-8"></script>
@@ -436,15 +437,15 @@
     <script src="js/libs/fancybox/3.0/jquery.fancybox.min.js"></script>
     <script src="js/libs/jquery.zhjsplugin.js" charset="utf-8"></script>
     <script src="js/libs/elevator.min.js" charset="utf-8"></script>
+
+    <!-- zepto -->
+    <!-- <script>jQuery.noConflict()</script> -->
+    <!-- <script src="http://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script> -->
+    <!-- <script src="js/libs/zepto/touch.js" charset="utf-8"></script> -->
+
     <script src="js/common.js" charset="utf-8"></script>
 
-    <!-- <script type="text/javascript">
-        var srConfig = {
-            reset:true,
-            mobile:true
-        }
-        window.sr = new scrollReveal(srConfig);
-    </script> -->
+
 
     <script type="text/javascript">
         window.onload = function() {
@@ -457,6 +458,9 @@
             });
         }
     </script>
+
+    <!-- bs rd -->
+    <script src="http://192.168.0.102:8080/target/target-script-min.js#browsersync"></script>
 
 
 </body>
